@@ -45,7 +45,7 @@ header {
   background-color: #999;
   background-image: url(img/background.PNG);
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center relative;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
