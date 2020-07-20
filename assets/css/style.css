@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main {
-  margin-left: 300px;
+  /*margin-left: 300px;*/
 }
 
 @media (max-width: 1199px) {
@@ -208,12 +208,22 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+#portfolio-item1 {
+  width: 100%;
+  height: 60vh;
+  background: url("../img/portfolio/Power Arm - Design and Creation/portfolio banner.png") top center;
+  background-size: cover;
+  background-position: center center;
+
+}
+
 #hero {
   width: 100%;
   height: 100vh;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
 }
+
 
 #hero:before {
   content: "";
@@ -234,11 +244,59 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 56px;
+  font-size: 84px;
+  font-weight: 400;
+  line-height: 84px;
   color: #fff;
+  text-decoration-color: #050d18;
+  text-align: center;
 }
+
+#hero .hero-container .underline{
+  text-decoration-line: underline;
+  text-decoration-color: #149ddd;
+  text-decoration-thickness: .5em;
+}
+
+#hero .hero-container .underline2
+{
+  background-image: linear-gradient(120deg, #84fab0 0%, #149ddd 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+  }
+}
+
+.links
+{
+  text-align: center;
+  background-image: linear-gradient(120deg, #84fab0 0%, #149ddd 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  padding: 14px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  animation: animate-line-reverse .25s ease-out;
+}
+.links:hover 
+{
+  animation: animate-line .25s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate-line {
+  0% {background-size: 100% 0.2em;}
+ 100% {background-size: 100% 88%;}
+}
+@keyframes animate-line-reverse {
+  0% {background-size: 100% 88%;}
+  100% {background-size: 100% 0.2em;}
+}
+
 
 #hero p {
   color: #fff;
@@ -251,7 +309,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
 }
 
 @media (min-width: 1024px) {
@@ -439,6 +496,14 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+#Resume-banner {
+  width: 100%;
+  height: 50vh;
+  background: url("../img/portfolio/Power Arm - Design and Creation/portfolio banner.png") top center;
+  background-size: cover;
+  background-position: center center;
+}
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -500,6 +565,14 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+#portfolio-banner {
+  width: 100%;
+  height: 50vh;
+  background: url("../img/portfolio/Power Arm - Design and Creation/portfolio banner.png") top center;
+  background-size: cover;
+  background-position: center center;
+}
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
