@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+  overflow: overlay;
 }
 
 a {
@@ -24,6 +25,31 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: auto;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0);
+  z-index: -10;
+  /*border-radius: 5px;
+  box-shadow: inset 0 0 5px grey;*/
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, #84fab0 0%, #149ddd 100%);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(120deg, #84fab0 0%, #149ddd 100%);
 }
 
 /*--------------------------------------------------------------
@@ -208,26 +234,22 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#portfolio-item1 {
-  width: 100%;
-  height: 60vh;
-  background: url("../img/portfolio/Power Arm - Design and Creation/portfolio banner.png") top center;
-  background-size: cover;
-  background-position: center center;
 
-}
 
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  overflow: overlay;
+  background: radial-gradient(circle, transparent 60%, rgba(0,0,0,.725) 100%) top center, linear-gradient(black, black), url("../img/hero-bg.jpg") top center;
   background-size: cover;
+  background-position: top center;
+  background-blend-mode: normal, saturation;
 }
 
 
 #hero:before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
+  background: rgba(5, 13, 24, 0);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -264,13 +286,36 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: 0 88%;
-  transition: background-size 0.25s ease-in;
-  &:hover {
-    background-size: 100% 88%;
-  }
+  animation: animate-accent .5s ease 1s;
+  animation-fill-mode: both;
 }
 
-.links
+@keyframes animate-accent{
+	0% {background-size: 100% 0em;}
+	100% {background-size: 100% 0.2em;}
+}
+
+@keyframes animate-border {
+  0% {}
+ 100% {
+
+  }
+}
+@keyframes animate-border-reverse {
+  0% {}
+  100% {}
+}
+
+@keyframes animate-line {
+  0% {background-size: 100% 0.2em;}
+ 100% {background-size: 100% 100%;}
+}
+@keyframes animate-line-reverse {
+  0% {background-size: 100% 100%;}
+  100% {background-size: 100% 0.2em;}
+}
+
+#hero .links
 {
   text-align: center;
   background-image: linear-gradient(120deg, #84fab0 0%, #149ddd 100%);
@@ -278,11 +323,11 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 100% 0.2em;
   background-position: 0 88%;
   padding: 14px 5px;
-  font-size: 16px;
+  font-size: 22px;
   cursor: pointer;
   animation: animate-line-reverse .25s ease-out;
 }
-.links:hover 
+#hero .links:hover 
 {
   animation: animate-line .25s ease-in;
   animation-fill-mode: forwards;
@@ -290,10 +335,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes animate-line {
   0% {background-size: 100% 0.2em;}
- 100% {background-size: 100% 88%;}
+ 100% {background-size: 100% 100%;}
 }
 @keyframes animate-line-reverse {
-  0% {background-size: 100% 88%;}
+  0% {background-size: 100% 100%;}
   100% {background-size: 100% 0.2em;}
 }
 
@@ -302,6 +347,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   margin-bottom: 50px;
   font-size: 26px;
+  font-weight: 300;
   font-family: "Poppins", sans-serif;
 }
 
@@ -327,6 +373,60 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
     margin-bottom: 30px;
   }
+}
+
+/*--------------------------------------------------------------
+# Portfolio Items
+--------------------------------------------------------------*/
+#portfolio-item1 {
+  width: 100%;
+  height: 60vh;
+  background: url("../img/portfolio/Power Arm - Design and Creation/PowerArm2-back-transparent-high-res.png") top center, #272829;
+  background-size: cover;
+  background-position: center center;
+}
+
+#portfolio-item1 .links
+{
+/*margin: auto;
+  text-align: center;
+  width: auto;
+  white-space: nowrap;*/
+  text-align: center;
+  color: inherit;
+
+  padding: 1.2%;
+  border-width: 5px;
+  border-style: solid;
+  border-image-slice: 5% repeat;
+  border-image: linear-gradient(120deg, #84fab0 0%, #149ddd 100%) 20%;
+  font-size: 32px;
+  font-weight: 400;
+  cursor: pointer;
+
+  background-image: linear-gradient(120deg, #84fab0 0%, #149ddd 100%), linear-gradient(0deg, #272829 0%, #272829 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 0%, 100% 100%;
+  background-position: 0% 0%;
+  background-clip: border-box, border-box;
+
+  transition: background-size .3s ease-out, color .3s ease-out;
+}
+#portfolio-item1 .links:hover 
+{
+  color: #272829;
+  background-position: 0% 100%;
+  background-size: 100% 100%;
+  transition: background-size .3s ease-in, color .3s ease-in;
+}
+
+#portfolio-item1 p {
+  color: #fff;
+  margin-bottom: 50px;
+  padding: 21vh;
+  font-size: 26px;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -499,7 +599,7 @@ section {
 #Resume-banner {
   width: 100%;
   height: 50vh;
-  background: url("../img/portfolio/Power Arm - Design and Creation/portfolio banner.png") top center;
+  background: url("../img/portfolio/Power Arm - Design and Creation/PowerArm2-back-transparent-high-res.png") top center;
   background-size: cover;
   background-position: center center;
 }
@@ -568,7 +668,7 @@ section {
 #portfolio-banner {
   width: 100%;
   height: 50vh;
-  background: url("../img/portfolio/Power Arm - Design and Creation/portfolio banner.png") top center;
+  background: url("../img/portfolio/Power Arm - Design and Creation/PowerArm2-back-transparent-high-res.png") top center;
   background-size: cover;
   background-position: center center;
 }
