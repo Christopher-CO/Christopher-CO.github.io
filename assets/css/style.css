@@ -242,6 +242,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: overlay;
   background: radial-gradient(circle, transparent 60%, rgba(0,0,0,.725) 100%) top center, linear-gradient(black, black), url("../img/hero-bg.jpg") top center;
   background-size: cover;
+  background-attachment: fixed;
   background-position: top center;
   background-blend-mode: normal, saturation;
 }
@@ -357,10 +358,8 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
 }
 
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
+@media (max-width: 900px) {
+  background-attachment: scroll;
 }
 
 @media (max-width: 768px) {
@@ -392,6 +391,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   width: auto;
   white-space: nowrap;*/
+  word-wrap: normal;
+  overflow: visible;
   text-align: center;
   color: inherit;
 
@@ -636,6 +637,10 @@ section {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.resume .resume-item h6 {
+float: right;
 }
 
 .resume .resume-item ul {
@@ -1145,6 +1150,7 @@ section {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 0;
+  color: #fff;
 }
 
 .portfolio-details .portfolio-details-container {

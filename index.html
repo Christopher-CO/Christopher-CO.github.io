@@ -10,6 +10,7 @@ that can be placed at the bottom of pages related to other projects not currentl
 - make the "my works" and "about me" drop down menues
 - animate Portfolio banner items scale as you scroll
 - animate Portfolio banner items tint from current gradient (but darker) to original color when hovered over
+- animate Portfolio banner items play and pause video when hovered over
 - use slidding underline (https://speckyboy.com/underline-text-effects-css/) for underlined initials
 - use slidding underline for the about and works links in addition to the current animation
 -->
@@ -54,25 +55,42 @@ that can be placed at the bottom of pages related to other projects not currentl
 <body>
 
   <!-- ======= Hero Section ======= --> <!-- Christopher Obiozor, I Create Immersive Experiences with interactive Tech: using Digital Design . Mechanical Engineering . Filmography . 3D Software -->
-  <section id="hero" style="overflow: overlay;" class="d-flex flex-column" >
-    <div class="hero-container" style="padding-top:10%; padding-left:6%">
-      <p><u class="underline">C</u>hristopher <u class="underline">O</u>biozor</p>
-	</div>
-	<div class="hero-container " style="padding-top:10%;" data-aos="fade-in">
-     <h1>
-	 Creating <span class="underline2">Immersive</span> Experiences
-	 </h1>
-	 <p style="text-align: center; padding-top: 80px;">
-	   <a href="portfolio.html" style="color:inherit;text-align: center;" class="links">Works</a>
-	   <a href="resume_and_skills.html" style="color:inherit;text-align: center;" class="links">About</a>
-	 </p>
-    </div>
-  </section>
+	<section id="hero" style="overflow: overlay;" class="d-flex flex-column" >
+		<div class="hero-container" style="padding-top:10%; padding-left:6%">
+			<p><u class="underline">C</u>hristopher <u class="underline">O</u>biozor</p>
+		</div>
+
+		<div class="hero-container " style="padding-top:10%;" data-aos="fade-in">
+			<h1>
+				Creating <span class="underline2">Immersive</span> Experiences
+			</h1>
+			
+			<p style="text-align: center; padding-top: 80px;">
+				<a href="portfolio.html" style="color:inherit;text-align: center;" class="links">Works</a>
+				<a href="resume_and_skills.html" style="color:inherit;text-align: center;" class="links">About</a>
+			</p>
+		</div>
+	</section>
 
   <!-- End Hero -->
 
   <main id="main">
 
+	<section id="portfolio-item1" >
+		<div class="container">
+			<p style="text-align: center;">
+				<a href="portfolio-details.html" class="links">Power Arm</a>
+			</p>
+		</div>
+	</section>
+	<!--
+	<section style="background-attachment: fixed; height: auto; max-height" id="portfolio-item1">
+		<div class="container">
+			<p style="text-align: center;">
+				<a href="portfolio-details.html" class="links">Power Arm</a>
+			</p>
+		</div>
+	</section>
 
 	<section id="portfolio-item1" >
 		<div class="container">
@@ -81,14 +99,7 @@ that can be placed at the bottom of pages related to other projects not currentl
 			</p>
 		</div>
 	</section>
-	<section id="portfolio-item1" >
-		<div class="container">
-			<p style="text-align: center;">
-				<a href="portfolio-details.html" class="links">Power Arm</a>
-			</p>
-		</div>
-	</section>
-   
+   -->
 
     <!-- ======= Portfolio Section ======= -->
 	<!-- Project List
