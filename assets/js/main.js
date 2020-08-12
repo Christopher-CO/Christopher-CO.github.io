@@ -139,7 +139,8 @@
   });
 
   // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
+   var testimonialsOwlCarousel = $(".testimonials-carousel");
+   testimonialsOwlCarousel.owlCarousel({
     autoplay: true,
     dots: true,
     loop: true,
@@ -157,12 +158,46 @@
   });
 
   // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
+  var portfolioOwlCarousel = $(".portfolio-details-carousel");
+  portfolioOwlCarousel.owlCarousel({
     autoplay: true,
     dots: true,
     loop: true,
+	slideTransition: 'ease-in-out',
     items: 1
+
   });
+
+  // Owl Carousel Pause and Play Autoplay functions
+    
+  // Pause Owl Carousels when clicked. (not working, not currently passing the right argument)
+  $('.owl-item, .owl-prev, .owl-next, .owl-dot, .owl-dot span').on('click',function(){
+    myPauseOwlCarousel($("this.owl-carousel"));
+  });
+
+   // Pause Portfolio Owl Carousel when dragged
+  portfolioOwlCarousel.on('dragged.owl.carousel', function(event) {
+    myPauseOwlCarousel($(event.target));
+  });
+
+  // Pause Testimonials Owl Carousel when dragged
+  testimonialsOwlCarousel.on('dragged.owl.carousel', function(event) {
+    myPauseOwlCarousel($(event.target));
+  });
+
+  function myPauseOwlCarousel(myOwlCarousel) {
+    myOwlCarousel.trigger('stop.owl.autoplay');
+	//alert('Hello world');
+	window.setTimeout(function(){ myStartAutoplay(myOwlCarousel); }, 60000);
+  }
+
+  function myStartAutoplay(myOwlCarousel){
+	myOwlCarousel.trigger('play.owl.autoplay');
+	//alert('Hello world');
+  }
+
+  //portfolioOwlCarousel.addEventListener('click', function(){ myPauseOwlCarousel(portfolioOwlCarousel); }, false);
+  //portfolioOwlCarousel.onclick = function(){ myPauseOwlCarousel(portfolioOwlCarousel); };
 
   // Initi AOS
   AOS.init({
