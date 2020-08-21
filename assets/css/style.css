@@ -281,7 +281,7 @@ video {
   font-weight: 400;
   line-height: 84px;
   color: #fff;
-  text-decoration-color: #050d18;
+  text-decoration-color: #778DA9;
   text-align: center;
 }
 
@@ -463,7 +463,7 @@ section {
   padding-bottom: 20px;
   position: relative;
   color: #fff;
-  /*color: #173b6c;*/
+  /*color: #149ddd;*/
 }
 
 .section-title h2::after {
@@ -487,7 +487,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #173b6c;
+  color: #149ddd;
 }
 
 .about .content ul {
@@ -533,7 +533,7 @@ section {
   line-height: 40px;
   display: block;
   font-weight: 700;
-  color: #050d18;
+  color: #778DA9;
   margin-left: 60px;
 }
 
@@ -570,7 +570,7 @@ section {
 
 .skills .category {
   font-size: 26px;
-  color: #050d18;
+  color: #415A77;
   background: #e4edf9;
   padding: 5px 15px;
   display: inline-block;
@@ -586,7 +586,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: #778DA9;
 }
 
 .skills .progress .skill .val {
@@ -621,7 +621,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #778DA9;
 }
 
 .resume .resume-item {
@@ -637,7 +637,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: #778DA9;
   margin-bottom: 10px;
 }
 
@@ -648,6 +648,7 @@ section {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  color: #415A77;
 }
 
 .resume .resume-item h6 {
@@ -967,14 +968,14 @@ float: right;
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #050d18;
+  color: #778DA9;
 }
 
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #173b6c;
+  color: #149ddd;
 }
 
 .contact .info .email p {
