@@ -170,30 +170,35 @@
 
   // Owl Carousel Pause and Play Autoplay functions
     
-  // Pause Owl Carousels when clicked. (not working, not currently passing the right argument)
-  $('.owl-item, .owl-prev, .owl-next, .owl-dot, .owl-dot span').on('click',function(){
-    myPauseOwlCarousel($("this.owl-carousel"));
+  // Pause Portfolio Owl Carousels when clicked.
+  $('.portfolio-details-carousel .owl-item, .portfolio-details-carousel .owl-prev, .portfolio-details-carousel .owl-next, .portfolio-details-carousel .owl-dot, .portfolio-details-carousel .owl-dot span').on('click',function(){
+    myPauseOwlCarousel(portfolioOwlCarousel);
   });
 
-   // Pause Portfolio Owl Carousel when dragged
+  // Pause Testimonials Owl Carousels when clicked.
+  $('.testimonials-carousel .owl-item, .testimonials-carousel .owl-prev, .testimonials-carousel .owl-next, .testimonials-carousel .owl-dot, .testimonials-carousel .owl-dot span').on('click',function(){
+    myPauseOwlCarousel(testimonialsOwlCarousel);
+  });
+
+   // Pause Portfolio Owl Carousels when dragged
   portfolioOwlCarousel.on('dragged.owl.carousel', function(event) {
     myPauseOwlCarousel($(event.target));
   });
 
-  // Pause Testimonials Owl Carousel when dragged
+  // Pause Testimonials Owl Carousels when dragged
   testimonialsOwlCarousel.on('dragged.owl.carousel', function(event) {
     myPauseOwlCarousel($(event.target));
   });
 
   function myPauseOwlCarousel(myOwlCarousel) {
     myOwlCarousel.trigger('stop.owl.autoplay');
-	//alert('Hello world');
+	//alert('Carousel Paused');
 	window.setTimeout(function(){ myStartAutoplay(myOwlCarousel); }, 60000);
   }
 
   function myStartAutoplay(myOwlCarousel){
 	myOwlCarousel.trigger('play.owl.autoplay');
-	//alert('Hello world');
+	//alert('Carousel Unpaused');
   }
 
   //portfolioOwlCarousel.addEventListener('click', function(){ myPauseOwlCarousel(portfolioOwlCarousel); }, false);

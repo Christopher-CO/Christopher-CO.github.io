@@ -1235,7 +1235,8 @@ float: right;
   padding: 0;
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px)*/
+@media (max-width: 991px) { 
   .portfolio-details .portfolio-description h2 {
     width: 100%;
   }
