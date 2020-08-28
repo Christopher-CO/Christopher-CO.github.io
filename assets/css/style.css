@@ -38,6 +38,7 @@ video {
 
 
 /* Scrollbar */
+
 /* width */
 ::-webkit-scrollbar {
   width: auto;
@@ -472,7 +473,8 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: linear-gradient(120deg, #84fab0 0%, #149ddd 100%);
+  /*background: #149ddd;*/
   bottom: 0;
   left: 0;
 }
@@ -1228,12 +1230,97 @@ float: right;
 .portfolio-details .portfolio-description h2 {
   width: 50%;
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 600;
+  margin-top: 60px;
   margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description h4 {
+  margin-top: 20px;
+}
+
+.portfolio-details .portfolio-description h4::before {
+  content: '// ';
+  background: -webkit-linear-gradient(#84fab0, #149ddd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.portfolio-details .portfolio-description h2::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 3px;
+  background: linear-gradient(120deg, #84fab0 0%, #149ddd 100%);
+  /*background: #149ddd;*/
+  margin-top: 20px;
+  bottom: 0;
+  left: 0;
 }
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+  line-height: 2;
+}
+
+/*
+.portfolio-details .portfolio-description figure {
+  display: table;
+}
+
+.portfolio-details .portfolio-description figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+*/
+.portfolio-details .portfolio-description .feather {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  box-shadow: inset 0 0 20px #272829;
+}
+
+.portfolio-details .portfolio-description hr {
+  color: #149ddd;
+  background-color: #149ddd;
+}
+
+.portfolio-details .portfolio-description li, dt, dd{
+  margin-bottom: 5px;
+}
+
+.portfolio-details .portfolio-description table {
+  border-width: 1px;
+  border-style: solid;
+  border-image-slice: 5% repeat;
+  border-image: linear-gradient(120deg, #84fab0 0%, #149ddd 100%) 20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description th, td {
+  padding: 15px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.portfolio-details .portfolio-description table ul {
+  display: table;
+  margin: 0 auto;
+}
+
+.portfolio-details .portfolio-description .column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.portfolio-details .portfolio-description .row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /*@media (max-width: 768px)*/
