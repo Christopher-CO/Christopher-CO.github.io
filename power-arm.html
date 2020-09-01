@@ -243,10 +243,9 @@
 		  align="right" style="margin: 0 0 10px 10px;" class="gradient-border"
 		  id="player" type="text/html" 
 		  width="50%" height="300px"
-		  src="https://www.youtube.com/embed/HryAfmHg3Sg"
-		  frameborder="0" allowfullscreen>
+		  src="https://www.youtube.com/embed/HryAfmHg3Sg?enablejsapi=1&playsinline=1&origin=https://christopher-co.github.io"
+		  frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" >
 		  </iframe>
-
 
 		  <h4>Demo Video</h4>
 		  <p>
@@ -459,6 +458,28 @@
   <script src="assets/vendor/video-pause-play-hover/video-pause-play-hover.js"></script>
   <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
   
+  <!-- YouTube JS API -->
+  <script>
+	  // Load the IFrame Player API code asynchronously.
+	  var tag = document.createElement('script');
+	  tag.src = "https://www.youtube.com/player_api";
+	  var firstScriptTag = document.getElementsByTagName('script')[0];
+	  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	  /*
+	  // Replace the 'ytplayer' element with an <iframe> and
+	  // YouTube player after the API code downloads.
+	  var player;
+	  function onYouTubePlayerAPIReady() {
+		player = new YT.Player('ytplayer', {
+		  height: '360',
+		  width: '640',
+		  videoId: 'M7lc1UVf-VE'
+		});
+	  }
+	  */
+  </script>
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
