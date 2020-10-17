@@ -168,7 +168,7 @@
 
   });
 
-  // Owl Carousel Pause and Play Autoplay functions
+  // Owl Carousel Pause and Play Autoplay functions //
     
   // Pause Portfolio Owl Carousels when clicked.
   $('.portfolio-details-carousel .owl-item, .portfolio-details-carousel .owl-prev, .portfolio-details-carousel .owl-next, .portfolio-details-carousel .owl-dot, .portfolio-details-carousel .owl-dot span').on('click',function(){
@@ -203,6 +203,7 @@
 
   //portfolioOwlCarousel.addEventListener('click', function(){ myPauseOwlCarousel(portfolioOwlCarousel); }, false);
   //portfolioOwlCarousel.onclick = function(){ myPauseOwlCarousel(portfolioOwlCarousel); };
+
 
   // Initi AOS
   AOS.init({
