@@ -376,7 +376,10 @@ video {
 }
 
 @media (max-width: 900px) {
-  background-attachment: scroll;
+  #hero{
+    background-attachment: scroll;
+  }
+  
 }
 
 @media (max-width: 768px) {
